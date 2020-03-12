@@ -10,17 +10,20 @@ export class LinkedList {
 
   add(node: LinkedListNode) {
     if (!!node) {
-      let currentNode = {...this.head};
-      while(currentNode.next) {
+      let lastNode = {...this.head};
+
+      while(lastNode.next) {
         
-        if (!currentNode.next.next) {
-          currentNode = currentNode.next
+        if (!lastNode.next.next) {
+          lastNode = lastNode.next
         }
       }
 
-      currentNode.next = node;
+      lastNode.next = node;
     }
   }
+
+  
 
   
 }
