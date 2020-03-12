@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      createList()
+    });
+
+    function createList() {
+      const DataStructures = window.DataStructures;
+
+      if (DataStructures) {
+        const LinkedNode = DataStructures.LinkedListNode;
+        const LinkedList = DataStructures.LinkedList;
+
+
+        const nextNode = new LinkedNode(2);
+        const node = new LinkedNode(1);
+
+
+        const list = new LinkedList(node);
+
+        node.pointTo(nextNode);
+
+        const otherNode = new LinkedNode(3);
+
+        list.add(otherNode);
+        console.log(list.head)
+
+        console.log(list)
+      } else {
+        console.log('is not ready yet')
+      }
+
+    }
+
+  </script>
+  <script src="../dist/index.js"></script>
+
+</body>
+
+</html>
