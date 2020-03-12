@@ -10,7 +10,7 @@ export class LinkedList {
 
   add(node: LinkedListNode) {
     if (!!node) {
-      let lastNode = {...this.head};
+      let lastNode = this.head
 
       while(lastNode.next) {
         
